@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 11: Multiplexing and Multiple Access
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

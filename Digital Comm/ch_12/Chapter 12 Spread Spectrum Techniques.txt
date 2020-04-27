@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 12: Spread Spectrum Techniques
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

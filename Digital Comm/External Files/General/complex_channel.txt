@@ -1,0 +1,13 @@
+Numerator Coefficients = 10
+
+1 + 2j
+0.7 + 0.2j
+0 + 0j
+0 + 0j
+0 + 0j
+0 + 0j
+0 + 0j
+0 + 0j
+0 + 0j
+0 + 0j
+

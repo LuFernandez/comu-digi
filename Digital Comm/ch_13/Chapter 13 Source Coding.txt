@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 13: Source Coding
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

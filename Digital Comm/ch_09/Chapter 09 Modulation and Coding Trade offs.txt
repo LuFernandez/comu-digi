@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 9: Modulation and Coding Trade offs
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

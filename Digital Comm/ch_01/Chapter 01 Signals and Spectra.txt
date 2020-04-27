@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 1: Signals and Spectra
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

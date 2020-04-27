@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 6: Channel Coding Part 1
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001

@@ -1,0 +1,80 @@
+Please read AND agree before commencing install........
+
+WARRANTY AND SPECIAL PROVISIONS
+
+The notes and license agreement specified below cover the proper use of the enclosed CD product named as the "Digital Communications Companion CD". This CD is only available as an appendix to the Digital Communications textbook by Bernard Sklar, published by Prentice-Hall 2001.
+
+Please read very carefully before installing or using this part of the Companion CD. For brevity, the Digital Communications CD Appendix is refered to as Companion CD below.
+
+The Companion CD is provided as an appendix to the Digital Communications (2nd Edition) textbook by Bernard Sklar, published by Prentice-Hall, 2001.  The Companion CD is not available by any other means and must not be sold or distributed separately.   If you did not acquire this CD as the sealed backcover appendix to the above-named textbook, then please inform the publisher immediately and return the illegal disk to the publisher.
+
+The value of the Companion CD is $0.25 (twenty-five US cents) of the cost of the textbook.  Refund or reimbursement costs for the CD will therefore not exceed this amount.
+
+FAIR WARNING
+
+This Companion CD is protected by copyright law and relevant international treaties.  Unauthorized reproduction and distribution of the information contained herein may result in severe and criminal penalties and will be prosecuted to the maximum extent possible under law.
+
+--------------
+
+LIMITED WARRANTY: This Companion CD which contains information as textual files, audio files, video and software is provided "as is" and without warranties as to performance of merchantability or any other warranties whether expressed or implied. Any liability of the publisher, copyright owner and/or seller will be limited exclusively to product replacement or refund of purchase price. This warranty is void if failure of any component of the Companion CD has resulted from accident, abuse or misapplication.
+
+--------------
+
+THIRD PARTY SOFTWARE: The Companion CD also contains Acrobat software by Adobe®. When installing these files you will be asked to agree to and abide by the license agreements specifically supplied by Adobe and their third party suppliers.
+
+--------------
+
+Companion CD LICENSE AGREEMENT:
+This agreement covers your use of the Companion CD product, including any enclosed manuals. By inserting the Companion CD in your PC CD drive you indicate acceptance of this license agreement and the Software License Agreement by Elanix, Inc. (attached below).  No responsibility is taken by the author or publishers of the Companion CD for any loss or damages arising out of your use of this product however it may be caused. Should you be in any doubt or have any reservations about the use of the Companion CD, then do not install. 
+
+1. ISSUE OF LICENSE: This agreement permits you to use the Companion CD for the purpose of learning about digital signal processing and communications. Proper use of the Companion CD is viewing files, printing to paper copy, replaying audio files and running SystemView examples via an IBM compatible PC. Some parts of the Companion CD may be password protected, and certain sections cannot be printed to hardcopy. The license is for a single user only and the Companion CD must not be placed on a network. You are limited to printing one complete copy of available manuals and other printable output of the Companion CD. The printed output and recorded audio segments of the Companion CD also constitutes materials that are copyrighted and must not be duplicated or stored by electronic means. 
+
+2. COPYRIGHTS AND RESTRICTIONS: The materials on the Companion CD are protected by international copyright laws and international treaty provisions. In line with agreed laws you may make one copy of the data on this Companion CD for backup or archive purposes.
+
+  - You may not rent or lease this Companion CD. 
+  - You may not copy or distribute this CD to any other storage medium.
+  - You may not reverse engineer, decompile or disassemble any software or materials on the Companion CD.
+
+3. LIMITED WARRANTY: For 60 days from the date of receipt, the physical Companion CD compact disc is guaranteed free from defects in materials or in workmanship.  As far as possible every care has been taken in ensuring all materials are complete and run error-free on Windows operating systems.   Should this NOT be the case, the publisher, authors, and Elanix take no responsibility for any effort or costs associated with correction or usage.
+
+4. LIMITATION OF LIABILITIES: Under no circumstances will the publisher or authors be liable for any indirect, accidental, special, economic or consequential damages out of the use or inability to use the Companion CD even if advised of such damages. In no event will the liability of Companion CD exceed the amount paid by you for the software.   Every care has been taken in producing this CD, and in ensuring the quality of the materials and software. 
+
+5. TRADEMARKS AND SERVICE MARKS: All trademarks and service marks are the properties of their owners and their use is subject to the guidelines available from the owners.
+
+COPYRIGHT NOTICE 2001: © All PDF materials are copyright R.W. Stewart,and where noted M.Schiff or Elanix Inc.  Other included materials are copyright of the named copyright holder.
+
+==========================
+SOFTWARE LICENSE AGREEMENT
+SystemView by ELANIX Student Edition
+
+This License Agreement is your proof of license.  Please treat it as valuable property.
+
+ELANIX LICENSE AGREEMENT
+
+This is a legal agreement between you (either an individual or an entity), and ELANIX, Inc.  If you do not agree to the terms of this Agreement, promptly return the diskette and/or CD-ROM package and all accompanying items (including written materials and binders or other containers) to the place you obtained them for a full refund.
+
+ELANIX SOFTWARE LICENSE
+
+1.	GRANT OF LICENSE.  This ELANIX License Agreement ('License') permits you to use one copy of the specified version of the ELANIX software product identified above ('SOFTWARE') on any single computer, provided the SOFTWARE is in use on only one, computer at a time.  If you have multiple Licenses for the SOFTWARE, then at any time you may have as many copies to the software in use as you have Licenses.  The SOFTWARE is 'in use' on a computer when it is loaded into temporary memory (i.e. RAM) or installed into the permanent memory (e.g. hard disk, CDROM, or other storage device) of that computer, except that a copy installed on a network server for the sole purpose of distribution to other computers is not 'in use.' If the anticipated number of users of the SOFTWARE will exceed the number of applicable Licenses, then you must have a reasonable mechanism or process in place to assure that the number of persons using the SOFTWARE concurrently does not exceed the number of Licenses.  If the  SOFTWARE is permanently installed on the hard disk or other storage device of a computer (other than a network server) and one person uses that computer more than 80% of the time it is in use, then that person may also use the SOFTWARE on a portable or home computer.
+
+2.	COPYRIGHT.  The SOFTWARE is owned by ELANIX or its suppliers and is protected by United States copyright laws and international provisions.  Therefore you must treat the SOFTWARE like any other copyrighted material (e.g. a book or musical recording) except that you may either (a) make one copy of the SOFTWARE solely for backup purposes, or (b) transfer the SOFTWARE to a single hard disk provided you keep the original solely for backup or archival purposes.  You may not copy the written materials accompanying the SOFTWARE without the express written consent of ELANIX.
+
+3.	OTHER RESTRICTIONS.  This License Agreement is your proof of license to exercise the rights granted herein and must be retained by you.  You may transfer your rights under this ELANIX License Agreement on a permanent basis provided you (1) transfer this License Agreement, the SOFTWARE, and all accompanying written materials and retain no copies, and the recipient agrees to the terms of this Agreement, (2) you obtain the express, written approval of ELANIX, Inc. prior to transferring the SOFTWARE.  You may not reverse engineer, de-compile, or disassemble the SOFTWARE.  You may not use the SOFTWARE for commercial purposes.  Any transfer of the SOFTWARE must include the most recent update and all prior versions.
+
+4.	DUAL MEDIA SOFTWARE. If the SOFTWARE package contains both 3.5 inch disks and CD-ROM, then you may use only the disk(s) appropriate for your single designated computer or network server.  You may not use the other disks on another computer or computer network, or loan, rent, lease, or transfer them to another user except as part of a transfer or other use expressly permitted by this ELANIX License Agreement.
+
+
+LIMITED WARRANTY.  ELANIX warrants that (a) the software will perform substantially in accordance with the accompanying written materials for a period of ninety (90) days from the date of receipt; and (b) any hardware accompanying the SOFTWARE will be free from defects in material and workmanship under normal use and service for a period of one (1) year, respectively.  Some states do not allow limitations on duration of and in implied warranty, so the above limitation may not apply to you.
+
+CUSTOMER REMEDIES.  ELANIX's entire liability and your exclusive remedy shall be the repair or replacement of the SOFTWARE or hardware that does not meet ELANIX's Limited Warranty and that is returned to ELANIX with a copy of your receipt.  This Limited Warranty is void if failure of the SOFTWARE or hardware has resulted from accident, abuse, or misapplication.  Any replacement SOFTWARE will be warranted for the remainder of the original period or thirty (30) days, whichever is longer.  Neither these remedies nor any product support services offered by ELANIX are available for this U.S.A. and Canada version product outside the United States of America or Canada.
+
+NO OTHER WARRANTIES.  ELANIX disclaims all other warranties, either express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose, with respect to the SOFTWARE, the accompanying materials, and any accompanying hardware.  This limited warranty gives you specific legal rights.  You may have others, which vary from state to state.
+
+NO LIABILITY FOR CONSEQUENTIAL DAMAGES.  In no event shall ELANIX or its suppliers be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use this ELANIX product, even if ELANIX has been advised of the possibility of such damages.  Because some states do not allow the exclusion or limitation of liability for consequential damages, the above limitation may not apply to you.
+
+US GOVERNMENT RESTRICTED RIGHTS
+The SOFTWARE and documentation are provided with RESTRICTED RIGHTS.  Use, duplication, or disclosure by the Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in Technical Data and Computer Software clause at DFARS 252.227-701 3 or subparagraphs (c)(1) and (2) of the Commercial Computer Software - Restricted Rights at 48 CFR 52.227-19 as applicable.  Contractor/manufacturer is ELANIX Incorporated, 5655 Lindero Canyon Rd. #721, Westlake Village, CA 91362.
+
+This agreement is governed by the laws of the State of California in the United States of America.
+
+For more information about ELANIX's licensing policies please call ELANIX at 818-597-1414, or write ELANIX at the above address.

@@ -1,0 +1,7 @@
+This directory contains SystemView exercises for
+ 
+Chapter 4: Bandpass Modulation and Demodulation Detection
+
+from
+Digital Communications
+Bernard Sklar 2nd Edition, 2001
