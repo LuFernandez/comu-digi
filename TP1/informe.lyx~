@@ -107,13 +107,9 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/HP/Documents/ITBA/Cuarto Año/Segundo cuatrimestre/Comunicaciones digitales/Tps/Ej3.10/circuito.pdf
+	filename Imagenes/circuito.pdf
 	scale 30
 
 \end_inset
@@ -154,16 +150,19 @@ En este ejercicio se trabajo con el filtro conocido como 'Integrate and
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Graphics
+	filename Imagenes/RtaImpulsiva.pdf
+	scale 30
+
+\end_inset
+
 
 \end_layout
 
@@ -196,8 +195,115 @@ Respuesta impulsiva del Integrate and dump filter con
 item a
 \end_layout
 
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
 \begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
+Determinar la funcion transferencia en frecuencia 
+\begin_inset Formula $H(f)$
+\end_inset
+
+ del circuito, y el cuadrado de la misma 
+\begin_inset Formula $|H(f)|^{2}$
+\end_inset
+
+.
+ Para que valores de 
+\begin_inset Formula $f$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $|H(f)|^{2}=0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subsubsection
+Resolucion Teorica
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/DiagramaBloques.PNG
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama en bloques del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La salida del sumador es la entrada integrada restada consigo misma pero
+ con un retardo de T.
+ Por lo que se tiene que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+y(t)=\stackrel[0]{t}{\int}x(\tau)d\tau-\stackrel[0]{t-T}{\int}x(\tau)d\tau
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si nombramos 
+\begin_inset Formula $u(t)=\stackrel[0]{t}{\int}x(\tau)d\tau$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(t)=u(t)-u(t-T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section

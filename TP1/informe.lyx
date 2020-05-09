@@ -153,7 +153,7 @@ En este ejercicio se trabajo con el filtro conocido como 'Integrate and
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -195,8 +195,263 @@ Respuesta impulsiva del Integrate and dump filter con
 item a
 \end_layout
 
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
 \begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
+Determinar la funcion transferencia en frecuencia 
+\begin_inset Formula $H(f)$
+\end_inset
+
+ del circuito, y el cuadrado de la misma 
+\begin_inset Formula $|H(f)|^{2}$
+\end_inset
+
+.
+ Para que valores de 
+\begin_inset Formula $f$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $|H(f)|^{2}=0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subsubsection
+Resolucion Teorica
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/DiagramaBloques.PNG
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama en bloques del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La salida del sumador es la entrada integrada restada consigo misma pero
+ con un retardo de T.
+ Por lo que se tiene que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+y(t)=\stackrel[0]{t}{\int}x(\tau)d\tau-\stackrel[0]{t-T}{\int}x(\tau)d\tau
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si nombramos 
+\begin_inset Formula $u(t)=\stackrel[0]{t}{\int}x(\tau)d\tau$
+\end_inset
+
+ y tenemos que 
+\begin_inset Formula $U(s)=\frac{X(s)}{s}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(t)=u(t)-u(t-T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando la transformada de Laplace de ambos lados se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(s)=U(s)(1-e^{-sT})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(s)=\frac{X(s)}{s}(1-e^{-sT})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{Y(s)}{X(s)}=\frac{1-e^{-sT}}{s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente evaluandoo en 
+\begin_inset Formula $s=j2\pi f$
+\end_inset
+
+ obtenemos la funcion transferencia en frecuencia:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(f)=\frac{1-e^{-j2\pi fT}}{j2\pi f}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando el modulo de la transferencia:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(f)=|\frac{1-e^{-j2\pi fT}}{j2\pi f}|=\frac{|1-e^{-j2\pi fT}|}{2\pi f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(f)|=\frac{\sqrt{(1-cos(2\pi fT))^{2}+sen^{2}(2\pi fT)}}{2\pi fT}=\frac{\sqrt{1-2cos(2\pi fT)+\stackrel{1}{\overbrace{cos^{2}(2\pi fT)+sen^{2}(2\pi fT)}}}}{2\pi fT}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+|H(f)|=\frac{\sqrt{2(1-cos(2\pi fT))}}{2\pi fT}\label{eq:Modulo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando el cuadrado de la ecuacion(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Modulo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)llegamos a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+|H(f)|^{2}=\frac{2(1-cos(2\pi fT))}{(2\pi fT)^{2}}\label{eq:Cuadrado}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Cuadrado"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), se puede ver que 
+\begin_inset Formula $|H(f)|^{2}=0$
+\end_inset
+
+ cuando:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $1=cos(2\pi fT)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces los ceros de 
+\begin_inset Formula $|H(f)|^{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $f=\frac{k}{T}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
