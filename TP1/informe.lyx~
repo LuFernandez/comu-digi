@@ -107,9 +107,13 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imagenes/circuito.pdf
+	filename C:/Users/HP/Documents/ITBA/Cuarto Año/Segundo cuatrimestre/Comunicaciones digitales/Tps/Ej3.10/circuito.pdf
 	scale 30
 
 \end_inset
@@ -150,19 +154,16 @@ En este ejercicio se trabajo con el filtro conocido como 'Integrate and
 \begin_layout Standard
 \align center
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename Imagenes/RtaImpulsiva.pdf
-	scale 30
-
-\end_inset
-
 
 \end_layout
 
