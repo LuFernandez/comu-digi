@@ -484,6 +484,12 @@ Resolucion
 \end_layout
 
 \begin_layout Standard
+Los puntos en los que se pide evaluar corresponden a los puntos medio entre
+ ceros de transmision en el espectro, lo cual significa que son los maximos
+ de los lobulos laterales.
+\end_layout
+
+\begin_layout Standard
 Evaluando (
 \begin_inset CommandInset ref
 LatexCommand ref
