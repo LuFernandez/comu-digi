@@ -372,7 +372,7 @@ Tomando el modulo de la transferencia:
 
 \begin_layout Standard
 \align center
-\begin_inset Formula $|H(f)|=\frac{\sqrt{(1-cos(2\pi fT))^{2}+sen^{2}(2\pi fT)}}{2\pi fT}=\frac{\sqrt{1-2cos(2\pi fT)+\stackrel{1}{\overbrace{cos^{2}(2\pi fT)+sen^{2}(2\pi fT)}}}}{2\pi fT}$
+\begin_inset Formula $|H(f)|=\frac{\sqrt{(1-cos(2\pi fT))^{2}+sen^{2}(2\pi fT)}}{2\pi f}=\frac{\sqrt{1-2cos(2\pi fT)+\stackrel{1}{\overbrace{cos^{2}(2\pi fT)+sen^{2}(2\pi fT)}}}}{2\pi f}$
 \end_inset
 
 
@@ -382,7 +382,7 @@ Tomando el modulo de la transferencia:
 \align center
 \begin_inset Formula 
 \begin{equation}
-|H(f)|=\frac{\sqrt{2(1-cos(2\pi fT))}}{2\pi fT}\label{eq:Modulo}
+|H(f)|=\frac{\sqrt{2(1-cos(2\pi fT))}}{2\pi f}\label{eq:Modulo}
 \end{equation}
 
 \end_inset
@@ -408,7 +408,7 @@ noprefix "false"
 \align center
 \begin_inset Formula 
 \begin{equation}
-|H(f)|^{2}=\frac{2(1-cos(2\pi fT))}{(2\pi fT)^{2}}\label{eq:Cuadrado}
+|H(f)|^{2}=\frac{2(1-cos(2\pi fT))}{(2\pi f)^{2}}\label{eq:Cuadrado}
 \end{equation}
 
 \end_inset
@@ -447,11 +447,173 @@ Entonces los ceros de
 \begin_inset Formula $|H(f)|^{2}$
 \end_inset
 
- son 
-\begin_inset Formula $f=\frac{k}{T}$
+ se encuentran evaluando en 
+\begin_inset Formula $f=\frac{k}{T},k\epsilon\mathbb{N}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+item b
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Evaluar 
+\begin_inset Formula $|H(f)|^{2}$
+\end_inset
+
+ en 
+\begin_inset Formula $f=\frac{k+\frac{1}{2}}{T},k\epsilon\mathbb{N}$
+\end_inset
+
+.Donde estan estos puntos en el espectro? Normalizar la respuesta con respecto
+ al valor en 
+\begin_inset Formula $f=0$
+\end_inset
+
+ y expresar en dB.
+\end_layout
+
+\begin_layout Subsubsection
+Resolucion
+\end_layout
+
+\begin_layout Standard
+Los puntos en los que se pide evaluar corresponden a los puntos medio entre
+ ceros de transmision en el espectro, lo cual significa que son los maximos
+ de los lobulos laterales.
+\end_layout
+
+\begin_layout Standard
+Evaluando (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Cuadrado"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) en 
+\begin_inset Formula $f=\frac{k+\frac{1}{2}}{T}$
+\end_inset
+
+ se obtiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(\frac{k+\frac{1}{2}}{T})|^{2}=\frac{2(1-cos(2\pi\frac{k+\frac{1}{2}}{\cancel{T}}\cancel{T}))}{(2\pi\frac{k+\frac{1}{2}}{T})^{2}}=\frac{\cancel{2}(1-\stackrel{-1}{\overbrace{cos((2k+1)\pi})})}{\cancel{2}.2\pi^{2}(\frac{k+\frac{1}{2}}{T})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(\frac{k+\frac{1}{2}}{T})|^{2}=\frac{\cancel{2}T^{2}}{\cancel{2}\pi^{2}(k+\frac{1}{2})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+|H(\frac{k+\frac{1}{2}}{T})|^{2}=(\frac{T}{\pi(k+\frac{1}{2})})^{2}\label{eq:sidelobes}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset Formula $f=0$
+\end_inset
+
+ se tiene un cero y un polo, para determinar el valor en dicho punto se
+ toma el limite de 
+\begin_inset Formula $f$
+\end_inset
+
+ tendiendo a 0:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\underset{f\rightarrow0}{lim}|H(f)|^{2}=\underset{f\rightarrow0}{lim}\frac{2(1-cos(2\pi fT))}{4\pi^{2}f^{2}}\stackrel{L'h}{=}\underset{f\rightarrow0}{lim}\frac{4\pi fTsen(2\pi fT)}{8\pi^{2}f}\stackrel{L'h}{=}\underset{f\rightarrow0}{lim}\frac{\cancel{8\pi^{2}}T^{2}cos(2\pi fT)}{\cancel{8\pi^{2}}}=T^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\underset{f\rightarrow0}{lim}|H(f)|^{2}=T^{2}\label{eq:Limite0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces dividiendo (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sidelobes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) por (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Limite0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) obtenemos el valor normalizado:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+|H(\frac{k+\frac{1}{2}}{T})|^{2}{}_{N}=(\frac{1}{\pi(k+\frac{1}{2})}){}^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pasando a dB:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(\frac{k+\frac{1}{2}}{T})|^{2}{}_{N}[dB]=-40log_{10}(\pi(k+\frac{1}{2}))$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
