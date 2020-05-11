@@ -495,12 +495,6 @@ Los puntos en los que se pide evaluar corresponden a los puntos medio entre
 \end_layout
 
 \begin_layout Standard
-Los puntos en los que se pide evaluar corresponden a los puntos medio entre
- ceros de transmision en el espectro, lo cual significa que son los maximos
- de los lobulos laterales.
-\end_layout
-
-\begin_layout Standard
 Evaluando (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -654,7 +648,7 @@ Resolución
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -671,7 +665,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-a
+Bode del SystemView en la parte superior, y bode teorico en la parte inferior
 \end_layout
 
 \end_inset
@@ -827,7 +821,7 @@ Resolución
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -996,11 +990,23 @@ sto puede verse fácilmente ya que dicho producto es:
 \end_layout
 
 \begin_layout Section
-Ejercicio 2 - 3.13 libro de Sklar
+Ejercicio 2 - 3.13 
+\end_layout
+
+\begin_layout Subsection
+Introducción
 \end_layout
 
 \begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
+MARCO TEORICO
+\end_layout
+
+\begin_layout Subsection
+Simulaciones
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section
