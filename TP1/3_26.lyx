@@ -173,9 +173,16 @@ En primer lugar, el retardo del token 7 representa el delay de todo el sistema,
 \end_layout
 
 \begin_layout Standard
-Por otro lado, los retardos de los tokens 11 y 12 son necesarios para actualizar
- los pesos de ambos filtros, puesto que se actualizan en base al error y
- al peso en el instante anterior; de la siguiente manera:
+Además, el feedback filter tiene a su entrada la decisiones de los símbolos
+ previos detectados, de ahí que necesita un retardo del token 11 como input.
+ Funcionalmente, este filtro se usa para remover esa parte de la ISI de
+ la estimación presente causada por símbolos detectados previamente.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, el retardo del token 12 es necesario para actualizar los
+ pesos de ambos filtros, puesto que se actualizan en base al error y al
+ peso en el instante anterior; de la siguiente manera:
 \end_layout
 
 \begin_layout Standard
