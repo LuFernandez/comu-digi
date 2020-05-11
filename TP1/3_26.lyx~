@@ -82,6 +82,10 @@
 \begin_body
 
 \begin_layout Section
+Ejercicio 3.26 -
+\begin_inset space ~
+\end_inset
+
 Feedforward/Decision Feedback Equalizer FF-DFE
 \end_layout
 
@@ -107,6 +111,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename 3.26/view.PNG
+	lyxscale 80
 	scale 60
 
 \end_inset
@@ -145,7 +150,7 @@ La señal a transmitir consiste de una secuencia aleatoria de pulsos de amplitud
  la ISI contribuida por estos símbolos puede ser cancelada, sustrayendo
  los valores de símbolos pasados ponderando adecuadamente la salida del
  ecualizador.
- Los pesos 
+ 
 \end_layout
 
 \begin_layout Standard
@@ -162,22 +167,41 @@ Retardos
 \end_layout
 
 \begin_layout Standard
-el 7 esta al pedo sirve para represetnar el delay que tendría desde que
- llega desde el transmisor hasta el receptor en la vida real/practica por
- lo que en la teoria/simulacio ncarece de sentido.
+En primer lugar, el retardo del token 7 representa el delay de todo el sistema,
+ puesto que al momento de calcular la señal de error, deben estar comparándose
+ las señales en el mismo tiempo (tap).
+ Esto para el caso de implementar el sistema en la práctica.
+ Al momento de implementarlo en la simulación, carece de sentido ya que
+ no hay delays; entonces el retardo propio del token 7 es 0 taps (no hay
+ retardo).
 \end_layout
 
 \begin_layout Standard
-El 11 es necesario para comparar con los vlaores de los simbolos previos,
- del pasado para poder eliminar la ISI.
+Por otro lado, los retardos de los tokens 11 y 12 son necesarios para actualizar
+ los pesos de ambos filtros, puesto que se actualizan en base al error y
+ al peso en el instante anterior; de la siguiente manera:
 \end_layout
 
 \begin_layout Standard
-el 12 del error es para lo mismo del 11??
+\begin_inset Formula 
+\[
+e(n)=d(n)-\mathbf{w}^{H}(n)\mathbf{u}(n)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-mostrar system view y explicar delays y cada uno de los bloques
+\begin_inset Formula 
+\[
+\mathbf{w}(n+1)=\mathbf{w}(n)+\mu e^{*}(n)\mathbf{u}(n)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
