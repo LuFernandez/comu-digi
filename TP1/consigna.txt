@@ -1,6 +1,12 @@
 “Comunicaciones Digitales”  TP N° 1 de Simulación con System View
 
+
 GRUPO  1
+
+3.10 eze
+3.13 Mati
+3.26 Lu
+4.2 manu
 
 – La presentación debe durar como máximo 40 minutos. La buena administración de este tiempo será evaluada.
 
@@ -15,5 +21,7 @@ GRUPO  1
 – Por último, será muy bienvenida la incorporación de modificaciones o cualquier otro tipo de artefacto que haga más completa y entretenida la presentación, partiendo del estricto mínimo de lo que piden los ejercicios (del CD del libro de Sklar) que les fueron asignados.
 
 - Los ejercicios a presentar por Uds. son los siguientes:
-
-3.10 – 3.13 – 3.26 – 4.2
+3.10 eze
+3.13 Mati
+3.26 Lu
+4.2 manu
