@@ -1006,15 +1006,13 @@ Simulaciones
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "3_26.lyx"
 
-\end_layout
+\end_inset
 
-\begin_layout Section
-Ejercicio 3 - 3.26 libro de Sklar
-\end_layout
 
-\begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
 \end_layout
 
 \begin_layout Section
