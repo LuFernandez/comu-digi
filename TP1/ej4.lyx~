@@ -177,7 +177,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal pseudo aleatoria
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -216,7 +216,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Frequency Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
@@ -323,7 +323,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de entrada y salida
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -358,7 +358,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Freq Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
@@ -373,10 +373,248 @@ Freq Sweep
 
 \begin_layout Standard
 Esto se debe a que al haber un defasaje en la demodulacion, hay una superposicio
-n entre el espectro de las señales por lo que en la salida se puede ver
- una 'mezcla' de las dos señales.
- Como resultado, se e montado una senoidal en los pulsos, y se ven los pulsos
- en el barrido de frecuencia.
+n entre las señales por lo que en la salida se puede ver una suma de las
+ dos señales.
+ Como resultado, se ve montado una senoidal en los pulsos, y se ven los
+ pulsos en el barrido de frecuencia.
+ Esto se puede ver mas claramente planteando las ecuaciones del circuito.
+ A la entrada tenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+I(t) & In-phase\\
+Q(t) & Quadrature
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al pasar por la modulacion obtenemos la suma de las señales multiplicadas
+ por su oscilador correspondiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(t)=I(t)\cdotp cos(\omega_{o}t)-Q(t)\cdotp sin(\omega_{o}t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la demodulacion se multiplica la señal por otra senodial y se atraviesa
+ la señal por un filtro LP.
+ Lo obtenido en la demodulacion de las señales moduladas antes del filtro
+ son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+A(t)=S(t)\cdotp cos(\omega_{o}t+\theta)=S(t)\cdotp[cos(\omega_{o}t)\cdotp cos(\theta)-sin(\omega_{o}t)\cdotp sin(\theta)]=S(t)\cdotp cos(\omega_{o}t)\cdotp cos(\theta)-S(t)\cdotp sin(\omega_{o}t)\cdotp sin(\theta)\\
+B(t)=S(t)\cdotp(-sin(\omega_{o}t+\theta))=-S(t)\cdotp[sin(\omega_{o}t)\cdotp cos(\theta)+cos(\omega_{o}t)\cdotp sin(\theta)]=-S(t)\cdotp sin(\omega_{o}t)\cdotp cos(\theta)-S(t)\cdotp cos(\omega_{o}t)\cdotp sin(\theta)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede obsevar que si 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, obtenemos que nuestar señales son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+A_{ideal}(t)=S(t)\cdotp cos(\omega_{o}t)\\
+B_{ideal}(t)=-S(t)\cdotp sin(\omega_{o}t)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando propiedades trigonometricas sobre 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+, se puede llegar a:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{ideal}(t)=\frac{I(t)}{2}\cdotp[1+cos(2\omega_{o}t)]+\frac{Q(t)}{2}\cdotp sin(2\omega_{o}t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando un LP a 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+, llegamos a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{ideal-LP}(t)=\frac{I(t)}{2}=I(t)\cdotp k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que llegamos a la conclusion de que con 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+ se puede obtener nuevamente nuestra señal de entrada.
+ Un procedimiento analogo se puede llevar a cabo para llegar a la misma
+ conclusion con 
+\begin_inset Formula $B_{ideal}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Entonces, reemplazando 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{ideal}(t)$
+\end_inset
+
+ en 
+\begin_inset Formula $A(t)$
+\end_inset
+
+, obtenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(t)=A_{ideal}(t)\cdotp cos(\theta)+B_{ideal}(t)\cdotp sin(\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con este resultado vemos como, cuando 
+\begin_inset Formula $\theta\neq2\pi n$
+\end_inset
+
+, la señal que se obtiene luego del filtro LP es una suma de ambas señales
+ con diferente amplitud.
+ Para el caso de 
+\begin_inset Formula $\theta=4^{\textdegree}$
+\end_inset
+
+, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(t)=A_{ideal}(t)\cdotp cos(4^{\textdegree})+B_{ideal}(t)\cdotp sin(4^{\textdegree})=A_{ideal}(t)\cdotp0.9975+B_{ideal}(t)\cdotp0.0697$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y luego del filtro se tendra:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{LP}(t)=\frac{I(t)}{2}\cdotp0.9975+\frac{Q(t)}{2}\cdotp0.0697$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+LLevando esto al extremo, se simulo nuevamente el sistema pero con un defasaje
+ de 
+\begin_inset Formula $45^{\textdegree}$
+\end_inset
+
+, donde las dos salidas son identicas, conformadas por las dos señales de
+ entrada en igual cantidad:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/def45.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal pseudo aleatoria binaria (PRBS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/def452.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de barrido de frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -410,7 +648,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imagenes/itemc.png
+	filename Imagenes/gauss.png
 	scale 50
 
 \end_inset
@@ -422,7 +660,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de entrada y salida
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -445,7 +683,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imagenes/itemc2.png
+	filename Imagenes/gauss2.png
 	scale 50
 
 \end_inset
@@ -457,7 +695,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Freq Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
@@ -497,7 +735,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de entrada y salida
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -532,7 +770,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Freq Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
@@ -659,7 +897,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de entrada y salida
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -694,7 +932,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Freq Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
@@ -757,7 +995,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de entrada y salida
+Señal pseudo aleatoria binaria (PRBS)
 \end_layout
 
 \end_inset
@@ -792,7 +1030,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Freq Sweep
+Señal de barrido de frecuencia
 \end_layout
 
 \end_inset
