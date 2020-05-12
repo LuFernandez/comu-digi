@@ -969,10 +969,24 @@ Eye diagram -
 \begin_layout Standard
 Este diagrama de ojo muestra menor robustez ante ISI que el diagrama del
  item 3.
- Aunque no se haya podido identificar un error por ISI en el solapamiento
- de entrada vs salida, ante un mínimo error de temporización, se podría
- confundir un pulso negativo con uno positivo, lo cual hace el sistema más
- falible de lo esperado.
+ De hecho, existe ISI.
+ Esto no solo se nota en el diagrama de ojo si no que además se muestra
+ en algunos valores del gráfico temporal anteriormente mostrado.
+ Se puede ver en este que hay muestras la secuencia verde del transmisor
+ no coinciden exactamente en el mismo valor que la salida amarilla, que
+ es la salida del filtro.
+ Esta dispersión de valores, aunque sea mínima, no puede ser debido al ruido
+ ya que este no se incorpora en la simulación, si no que es debido a la
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ISI
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Se marcaron con circulos rojos algunas muestras con ISI notable.
 \end_layout
 
 \begin_layout Standard
