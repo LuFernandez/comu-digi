@@ -460,13 +460,13 @@ Como segunda parte del ejercicio, se propone mostrar el espectro para ver
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Ej3.13/20logFFTITEM2.PNG
-	scale 40
+	scale 30
 
 \end_inset
 

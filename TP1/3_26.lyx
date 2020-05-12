@@ -89,6 +89,21 @@ Ejercicio 3.26 - Feedforward/Decision Feedback Equalizer FF-DFE
 Introducción
 \end_layout
 
+\begin_layout Quotation
+Run the system.
+ View the filter weights after adaption, remembering that the adaptive filter
+ is actually connected in a feedback configuration.
+ Has the channel been equalised? Could a conventional feedforward channel
+ have equalised this channel?
+\end_layout
+
+\begin_layout Quotation
+Run the system and confirm the ability to equalize the channel.
+ Note the channel impulse response.
+ Try changing to something a little more involved.
+ Note that this sytem is a feedforward-decision feedback equalizer (FF-DFE).
+\end_layout
+
 \begin_layout Standard
 El ejercicio propuesto consiste en un decision feedback equalizer (DFE),
  un ecualizador realimentado mediante el cual se busca eliminar la interferencia

@@ -89,6 +89,13 @@ Ejercicio 3.26 - Feedforward/Decision Feedback Equalizer FF-DFE
 Introducción
 \end_layout
 
+\begin_layout Quotation
+Run the system and confirm the ability to equalize the channel.
+ Note the channel impulse response.
+ Try changing to something a little more involved.
+ Note that this sytem is a feedforward-decision feedback equalizer (FF-DFE).
+\end_layout
+
 \begin_layout Standard
 El ejercicio propuesto consiste en un decision feedback equalizer (DFE),
  un ecualizador realimentado mediante el cual se busca eliminar la interferencia
@@ -174,7 +181,7 @@ En primer lugar, el retardo del token 7 representa el delay de todo el sistema,
 
 \begin_layout Standard
 Además, el feedback filter tiene a su entrada la decisiones de los símbolos
- previos detectados, de ahí que necesita un retardo como input.
+ previos detectados, de ahí que necesita un retardo del token 11 como input.
  Funcionalmente, este filtro se usa para remover esa parte de la ISI de
  la estimación presente causada por símbolos detectados previamente.
 \end_layout

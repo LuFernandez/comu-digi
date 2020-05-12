@@ -61,9 +61,6 @@
 \topmargin 2cm
 \rightmargin 2cm
 \bottommargin 2cm
-\headheight 2cm
-\headsep 2cm
-\footskip 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -201,7 +198,7 @@ Respuesta impulsiva del Integrate and dump filter con
 \end_layout
 
 \begin_layout Subsection
-item a
+Item a
 \end_layout
 
 \begin_layout Subsubsection
@@ -460,7 +457,7 @@ Entonces los ceros de
 \end_layout
 
 \begin_layout Subsection
-item b
+Item b
 \end_layout
 
 \begin_layout Subsubsection
@@ -622,7 +619,7 @@ Pasando a dB:
 \end_layout
 
 \begin_layout Subsection
-item c
+Item c
 \end_layout
 
 \begin_layout Subsubsection
@@ -777,7 +774,7 @@ Este valor para el máximo del primer lóbulo lateral coincide con el que
 \end_layout
 
 \begin_layout Subsection
-item d
+Item d
 \end_layout
 
 \begin_layout Subsubsection
