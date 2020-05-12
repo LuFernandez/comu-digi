@@ -1,0 +1,983 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Ejercicio 2 - 3.13 
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+En este ejercicio se realizan simulaciones para mostrar el comportamiento
+ de los filtros de tipo coseno elevado (con simetría vestigial) frente a
+ la 
+\begin_inset Quotes eld
+\end_inset
+
+Interferencia Intersimbólica
+\begin_inset Quotes erd
+\end_inset
+
+ (ISI).
+\end_layout
+
+\begin_layout Standard
+Para el análisis de la simulación, es importante recordar la relación entre
+ el mínimo ANCHO DE BANDA (
+\begin_inset Quotes eld
+\end_inset
+
+W
+\begin_inset Quotes erd
+\end_inset
+
+) y TASA DE BITS (
+\begin_inset Quotes eld
+\end_inset
+
+Rb
+\begin_inset Quotes erd
+\end_inset
+
+), teniendo en cuenta el roll-of (
+\begin_inset Quotes eld
+\end_inset
+
+r
+\begin_inset Quotes erd
+\end_inset
+
+), en banda base:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $W(Hz)=\frac{(1+r).Rb}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta relación fue mostrada por Nyquist y ocurre cuando la transeferencia
+ del canal es rectangular, es decir que la respuesta al impulso es 
+\begin_inset Formula $h(t)=sinc(t/T_{b})$
+\end_inset
+
+, siendo 
+\begin_inset Formula $"T_{b}"$
+\end_inset
+
+ el período de transmisión de símbolos binarios 
+\begin_inset Formula $(T_{b}=\frac{1}{Rb})$
+\end_inset
+
+.
+ Esta transferencia es la más eficiente en cuanto a ancho de banda, sin
+ embargo es propensa a tener ISI en exceso en caso de errores de 
+\begin_inset Quotes eld
+\end_inset
+
+timing
+\begin_inset Quotes erd
+\end_inset
+
+, debido a los elevados lóbulos secundarios de la respuesta al impulso.
+ Dicho esto, solo basta aclarar los tres factores a tener en cuenta a la
+ hora de decidir el filtro para reducir ISI:
+\end_layout
+
+\begin_layout Standard
+\align center
+1) Complejidad del filtro (disminuye al aumentar r)
+\end_layout
+
+\begin_layout Standard
+\align center
+2)Robustez del sistema ante errores de temporización (aumenta al aumentar
+ r)
+\end_layout
+
+\begin_layout Standard
+\align center
+3)Retardo necesario para implementación causal (disminuye al aumentar r)
+\end_layout
+
+\begin_layout Standard
+\align center
+4)Ancho de banda necesario (aumenta al aumentar r)
+\end_layout
+
+\begin_layout Subsection
+Sistema de Simulación
+\end_layout
+
+\begin_layout Standard
+Para simular el comportamiento de los filtros de coseno elevado en este
+ ejercicio, se utiliza el siguiente sistema en el programa System View:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Ej3.13/sistemaCAJAS.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema Simulación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el sistema, se genera una señal de pulsos aleatorios positivos y negativos
+ (DATA STREAM), el cual pasa por un filtro de tipo coseno elevado y una
+ etapa de ganancia para luego ser muestreada la salida.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, el DATA STREAM es mostrado por el System View, y para poder
+ comparar correctamente con la salida del filtro coseno elevado y la etapa
+ de ganancia, se muestra luego de que se pase por una etapa de retardo.
+ Esta etapa de retardo tiene 150 delays, lo cual es consistente con un filtro
+ FIR de coseno elevado de 301 muestras (un muestra central y 150 a cada
+ lado).
+ Entonces, por ejemplo, con una frecuencia de muestreo (no es lo mismo a
+ tasa de emisión de bits) de 
+\begin_inset Formula $10,42e-6$
+\end_inset
+
+ seg, se tiene un delay del sistema de 
+\begin_inset Formula $10,42e-6*150=1,563e-3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El bloque 
+\begin_inset Quotes eld
+\end_inset
+
+DATA STREAM
+\begin_inset Quotes erd
+\end_inset
+
+ esta conformado por los siguientes bloques:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/dataStreamCAJAS.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DATA STREAM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este bloque genera pulsos positivos y negativos de manera aleatoria, para
+ lo cual multiplica una secuencia aleatoria de 1 y -1 por una generador
+ de pulsos.
+\end_layout
+
+\begin_layout Subsection
+Item 1
+\end_layout
+
+\begin_layout Standard
+En la primera parte de la simulación se utiliza un factor de roll-off de
+ 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ para el filtro coseno elevado, y una tasa de emisión de 
+\begin_inset Formula $2400\frac{simb}{seg}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se muestra la configuración utilizada en system view y el
+ resultado final de la simulación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Ej3.13/pulseTrainITEM1.PNG
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Ej3.13/raisedCosineITEM1.PNG
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración System View
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/outputITEM1.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Salida del filtro y Data Stream
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede notar claramente que a salida del filtro de coseno elevado se obtiene
+ una señal sin interferencia intersimbólica.
+ Esto se logró con un FIR de 301 taps, factor de roll-off igual a la unidad
+ y una taza de emisión de 
+\begin_inset Formula $2400\frac{simb}{seg}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Item 2
+\end_layout
+
+\begin_layout Standard
+Como segunda parte del ejercicio, se propone mostrar el espectro para ver
+ el ancho de banda de la señal.
+ Para esto muestra en escala logaritmica el resultado de la FFT de la salida
+ del filtro coseno elevado, mostrando que efectivamente la señal ocupa hasta
+ 2400Hz (con este ancho de banda de canal alcanza para que pueda ser transmitida
+ la señal):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/20logFFTITEM2.PNG
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Ej3.13/20LOGSUMITEM2.PNG
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+20Log(|FFT|) - Ancho de banda de señal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede notar como la atenuación cae al máximo en 2400Hz.
+\end_layout
+
+\begin_layout Standard
+Para lograr visualizar estos gráficos se hizo uso de la ventana de análisis
+ del System View.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/ventanaITEM2.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ventana de Análisis (icono de la derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además vale aclarar que para obtener mejores resultados en el cálculo de
+ la FFT se utilizaron un número de 16384 muestras (en lugar de 1024 como
+ se utilizó por default en el item 1).
+\end_layout
+
+\begin_layout Subsection
+Item 3
+\end_layout
+
+\begin_layout Standard
+En la tercer parte del ejercicio, se propone cambiar el factor de roll-off
+ a 0,22 (es un valor más común en la práctica) y corroborar que se continue
+ sin ISI, pero que además se necesita menos ancho de banda (esta vez el
+ exceso es de 
+\begin_inset Formula $\frac{0,22}{T_{b}}$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $\frac{1}{T_{b}}$
+\end_inset
+
+).
+ A continuación se muestra la configuración del nuevo filtro coseno elevado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/ITEM3ROLLOFCONFIG.PNG
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración FIR - 
+\begin_inset Formula $r=0,22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez configurado el filtro, se corrobora que no haya ISI, para lo cual
+ se solapa la salida del filtro con la secuencia original de pulsos (gráfico
+ de la izquierda a continuación):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/ITEM3TIMEOVERLAP.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Salida filtro FIR - Solapamiento señal de salida y señal de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mientras que con el gráfico de salida y entrada solapadas se puede ver que
+ no hay ISI, en el gráfico de la izquierda (solo señal de salida) se puede
+ notar que los pulsos presentan más distorsión en cuanto los que se obtuvieron
+ en el item 1.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se muestra que con este factor 
+\begin_inset Formula $r$
+\end_inset
+
+, se logra que la señal ocupe menos ancho de banda (hasta 
+\begin_inset Formula $\frac{1,22.2400}{2}Hz=1464Hz$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/FFTITEM3.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+20log(|FFT|) - Ancho de banda - 
+\begin_inset Formula $r=0,22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto significa que aunque los pulsos presentan mayor distorsión a simple
+ vista, 
+\begin_inset Formula $r=0,22$
+\end_inset
+
+ es mejor factor de roll-off ya que logra evitar ISI con menor ancho de
+ banda ocupado.
+\end_layout
+
+\begin_layout Subsection
+Item 4
+\end_layout
+
+\begin_layout Standard
+En esta parte de la ejercitación se propone mostrar los diagramas de ojo
+ para los items anteriores.
+ Los resultados son los siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/OJOROLLOF1.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Eye Diagram - 
+\begin_inset Formula $r=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/OJOROLLOF022.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Eye diagram - 
+\begin_inset Formula $r=0,22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De estos dos diagramas de ojos se puede notar claramente que al disminuir
+ 
+\begin_inset Formula $"r"$
+\end_inset
+
+ aumenta el jitter, aunque en los dos diagramas existe una apertura vertical
+ que es señal de que hay inmunidad frente a la interferencia intersimbólica
+ en ambos casos.
+\end_layout
+
+\begin_layout Standard
+Para obtener estos diagramas, se utilizó una opción especial de la ventana
+ de análisis del software de simulación, indicando en el eje temporal 2
+ tiempos de pulso.
+\end_layout
+
+\begin_layout Subsection
+Item 5
+\end_layout
+
+\begin_layout Standard
+En la última parte del ejercicio se propone reemplazar el filtro de coseno
+ elevado por uno que sea de raíz coseno elevado y comparar su comportamiento
+ con el filtro del item 3 (coseno elevado con factor de roll-off de 0,22).
+\end_layout
+
+\begin_layout Standard
+A continuación se presenta la configuración del filtro de raiz de coseno
+ elevado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/ROOTCONFIG.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Raíz de coseno elevado - configuración
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En principio, con un mismo factor de roll-off se puede notar lobulos temporales
+ más elevados.
+ Esto se ve reflejado en la siguiente figura, en donde los pulsos presentan
+ aún más distorsión que los del item 3:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/SOLAPADOITEM5.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Raíz de coseno elevado - entrada y salida solapadas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, otra representación que es de utilidad para la comparación es
+ el diagrama de ojo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ej3.13/EYEITEM5.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Eye diagram - 
+\begin_inset Formula $r=0,22$
+\end_inset
+
+- Raíz de coseno elevado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este diagrama de ojo muestra menor robustez ante ISI que el diagrama del
+ item 3.
+ Aunque no se haya podido identificar un error por ISI en el solapamiento
+ de entrada vs salida, ante un mínimo error de temporización, se podría
+ confundir un pulso negativo con uno positivo, lo cual hace el sistema más
+ falible de lo esperado.
+\end_layout
+
+\begin_layout Standard
+Vale aclarar que tiene sentido que el filtro de raiz de coseno elevado presente
+ peor comportamiento comparado con el de coseno elevado ya que el primero
+ no cumple con el teorema de Nyquist que dice que la respuesta impulsiva
+ del filtro debe anularse para múltiplos enteros de 
+\begin_inset Formula $T_{b}$
+\end_inset
+
+ mientras que el segundo si cumple esto (además de la simetría vestigial).
+ Por esto es que enrealidad se usan dos filtros de raiz de coseno elevado
+ (uno en el transmisor y uno en el receptor) para lograr el de coseno elevado.
+\end_layout
+
+\end_body
+\end_document

@@ -1006,15 +1006,13 @@ Simulaciones
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "3_26.lyx"
 
-\end_layout
+\end_inset
 
-\begin_layout Section
-Ejercicio 3 - 3.26 libro de Sklar
-\end_layout
 
-\begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
 \end_layout
 
 \begin_layout Section
@@ -1022,7 +1020,317 @@ Ejercicio 4 - 4.2 libro de Sklar
 \end_layout
 
 \begin_layout Standard
-ENUNCIADO, RESOLUCION, FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
+FOTITO DE SYSTEM VIEW Y COMPARACION DE RESULTADOS
+\end_layout
+
+\begin_layout Subsection
+Item a
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Correr el sistema propuesto y notar que los dos inputs pueden ser recuperados
+ en el receptor a la salida.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Partiendo del sistema propuesto, se armó el mismo y se simuló la salida
+ sin defasajes en los osciladores en el receptor.
+ El sistema es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El output para el receptor es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, se puede obtener una replica de la entrada en la salida.
+\end_layout
+
+\begin_layout Subsection
+Item b
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Ingresar un error de fase de cuatro grados en el oscilador local en el receptor.
+ Cual es el efecto en la salida?
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al ingresar el error de fase se obtiene la siguiente salida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto se debe a ...
+ TERMINAR
+\end_layout
+
+\begin_layout Subsection
+Item c
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Probar agregar ruido gaussiano al canal y correr el sistema nuevamente.
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al agregar ruido gaussiano al sistema se obtienen los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Item d
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Subsection
+Item e
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Subsection
+Item f
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Subsection
+Item g
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
 \end_layout
 
 \end_body

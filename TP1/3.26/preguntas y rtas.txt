@@ -1,0 +1,4 @@
+Run the system.  
+View the filter weights after adaption, remembering that the adaptive filter is actually connected in a feedback configuration.  
+Has the channel been equalised?  
+Could a conventional feedforward channel have equalised this channel?
