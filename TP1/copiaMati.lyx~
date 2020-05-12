@@ -966,18 +966,5 @@ Este diagrama de ojo muestra menor robustez ante ISI que el diagrama del
  falible de lo esperado.
 \end_layout
 
-\begin_layout Standard
-Vale aclarar que tiene sentido que el filtro de raiz de coseno elevado presente
- peor comportamiento comparado con el de coseno elevado ya que el primero
- no cumple con el teorema de Nyquist que dice que la respuesta impulsiva
- del filtro debe anularse para múltiplos enteros de 
-\begin_inset Formula $T_{b}$
-\end_inset
-
- mientras que el segundo si cumple esto (además de la simetría vestigial).
- Por esto es que enrealidad se usan dos filtros de raiz de coseno elevado
- (uno en el transmisor y uno en el receptor) para lograr el de coseno elevado.
-\end_layout
-
 \end_body
 \end_document
