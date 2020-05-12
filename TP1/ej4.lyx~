@@ -89,7 +89,7 @@ Ejercicio 4 - 4.2 libro de Sklar
 \end_layout
 
 \begin_layout Subsection
-Item a
+Ítem a
 \end_layout
 
 \begin_layout Subsubsection
@@ -238,7 +238,7 @@ Como se puede ver, se puede obtener una replica de la entrada en la salida.
 \end_layout
 
 \begin_layout Standard
-Modulacion de Amplitud de una señal con ancho de banda 
+Modulación de Amplitud de una señal con ancho de banda 
 \begin_inset Formula $B$
 \end_inset
 
@@ -281,7 +281,7 @@ Modulacion de Amplitud de una señal con ancho de banda
 \end_layout
 
 \begin_layout Subsection
-Item b
+Ítem b
 \end_layout
 
 \begin_layout Subsubsection
@@ -372,7 +372,7 @@ Señal de barrido de frecuencia
 \end_layout
 
 \begin_layout Standard
-Esto se debe a que al haber un defasaje en la demodulacion, hay una superposicio
+Esto se debe a que al haber un defasaje en la demodulación, hay una superposició
 n entre las señales por lo que en la salida se puede ver una suma de las
  dos señales.
  Como resultado, se ve montado una senoidal en los pulsos, y se ven los
@@ -392,7 +392,7 @@ Q(t) & Quadrature
 \end_layout
 
 \begin_layout Standard
-Al pasar por la modulacion obtenemos la suma de las señales multiplicadas
+Al pasar por la modulación obtenemos la suma de las señales multiplicadas
  por su oscilador correspondiente:
 \end_layout
 
@@ -404,7 +404,7 @@ Al pasar por la modulacion obtenemos la suma de las señales multiplicadas
 \end_layout
 
 \begin_layout Standard
-Para la demodulacion se multiplica la señal por otra senodial y se atraviesa
+Para la demodulacion se multiplica la señal por otra senoidal y se atraviesa
  la señal por un filtro LP.
  Lo obtenido en la demodulacion de las señales moduladas antes del filtro
  son:
@@ -421,11 +421,11 @@ B(t)=S(t)\cdotp(-sin(\omega_{o}t+\theta))=-S(t)\cdotp[sin(\omega_{o}t)\cdotp cos
 \end_layout
 
 \begin_layout Standard
-Se puede obsevar que si 
+Se puede observar que si 
 \begin_inset Formula $\theta=0$
 \end_inset
 
-, obtenemos que nuestar señales son:
+, obtenemos que nuestra señales son:
 \end_layout
 
 \begin_layout Standard
@@ -439,7 +439,7 @@ B_{ideal}(t)=-S(t)\cdotp sin(\omega_{o}t)
 \end_layout
 
 \begin_layout Standard
-Aplicando propiedades trigonometricas sobre 
+Aplicando propiedades trigonométricas sobre 
 \begin_inset Formula $A_{ideal}(t)$
 \end_inset
 
@@ -469,13 +469,13 @@ Aplicando un LP a
 \end_layout
 
 \begin_layout Standard
-Por lo que llegamos a la conclusion de que con 
+Por lo que llegamos a la conclusión de que con 
 \begin_inset Formula $A_{ideal}(t)$
 \end_inset
 
  se puede obtener nuevamente nuestra señal de entrada.
- Un procedimiento analogo se puede llevar a cabo para llegar a la misma
- conclusion con 
+ Un procedimiento análogo se puede llevar a cabo para llegar a la misma
+ conclusión con 
 \begin_inset Formula $B_{ideal}(t)$
 \end_inset
 
@@ -527,7 +527,7 @@ Con este resultado vemos como, cuando
 \end_layout
 
 \begin_layout Standard
-Y luego del filtro se tendra:
+Y luego del filtro se tendrá:
 \end_layout
 
 \begin_layout Standard
@@ -538,12 +538,12 @@ Y luego del filtro se tendra:
 \end_layout
 
 \begin_layout Standard
-LLevando esto al extremo, se simulo nuevamente el sistema pero con un defasaje
+Llevando esto al extremo, se simulo nuevamente el sistema pero con un defasaje
  de 
 \begin_inset Formula $45^{\textdegree}$
 \end_inset
 
-, donde las dos salidas son identicas, conformadas por las dos señales de
+, donde las dos salidas son idénticas, conformadas por las dos señales de
  entrada en igual cantidad:
 \end_layout
 
@@ -617,8 +617,82 @@ Señal de barrido de frecuencia
 
 \end_layout
 
+\begin_layout Standard
+Esto tambien se puede ver de forma fasorial, con los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/fas1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama fasorial para 4 grados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/fas2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama fasorial para 45 grados 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Item c
+Ítem c
 \end_layout
 
 \begin_layout Subsubsection
@@ -784,7 +858,7 @@ Señal de barrido de frecuencia
 \end_layout
 
 \begin_layout Subsection
-Item d y e
+Ítem d y e
 \end_layout
 
 \begin_layout Subsubsection
@@ -793,8 +867,8 @@ Enunciado
 
 \begin_layout Standard
 Abrir un nuevo sistema en System View.
- Identificar el Qad_Mod token del lado de la modulacion, y el IQ-mixer en
- el receptor y chequear los parametros.
+ Identificar el Qad_Mod token del lado de la modulación, y el IQ-mixer en
+ el receptor y chequear los parámetros.
 \end_layout
 
 \begin_layout Subsubsection
@@ -846,16 +920,69 @@ Nuevo sistema
 
 \begin_layout Standard
 Se puede ver como las dos señales entran al Quad Mod token, donde se multiplican
- por sus respecivas moduladoras y son sumadas.
- De ahi se obtiene una sola señal la cual es enviada por el canal.
+ por sus respectivas moduladoras y son sumadas.
+ De ahí se obtiene una sola señal la cual es enviada por el canal.
  Luego de salir del canal, entra en el token de IQ Mixer, el cual multiplica
  la señal por la demoduladora correspondiente.
  Por lo que luego de pasar por el filtro LP, se obtienen las dos señales
  originales nuevamente.
+ Los parametros modificables son:
 \end_layout
 
+\begin_layout Itemize
+Quad Mod Token:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Fase
+\end_layout
+
+\begin_layout Enumerate
+Amplitud
+\end_layout
+
+\begin_layout Enumerate
+Frecuencia
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IQ Mixer Token:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Amplitud
+\end_layout
+
+\begin_layout Enumerate
+Fase
+\end_layout
+
+\begin_layout Enumerate
+Frecuencia
+\end_layout
+
+\begin_layout Enumerate
+Error de Amplitud
+\end_layout
+
+\begin_layout Enumerate
+Error de fase
+\end_layout
+
+\begin_layout Enumerate
+IQ Rotate (analgo a el defasaje de 
+\begin_inset Formula $\theta$
+\end_inset
+
+ de los puntos anteriores)
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
-Item f
+Ítem f
 \end_layout
 
 \begin_layout Subsubsection
@@ -946,12 +1073,12 @@ Señal de barrido de frecuencia
 \end_layout
 
 \begin_layout Standard
-Se puede observar que actuan de manera equivalente al primer sistema, pudiendo
+Se puede observar que actúan de manera equivalente al primer sistema, pudiendo
  recuperar ambas señales en el receptor.
 \end_layout
 
 \begin_layout Subsection
-Item g
+Ítem g
 \end_layout
 
 \begin_layout Subsubsection
@@ -959,7 +1086,7 @@ Enunciado
 \end_layout
 
 \begin_layout Standard
-Para el IQ-mixer, settear el parametro IQ rotate a 4 grados y confirmar
+Para el IQ-mixer, settear el parámetro IQ rotate a 4 grados y confirmar
  que el efecto es el mismo que poner un defasaje como en el punto anterior.
  
 \end_layout
@@ -969,7 +1096,7 @@ Resolución
 \end_layout
 
 \begin_layout Standard
-Al agregar como parametro al IQ rotate 4 grados, obtenemos los siguientes
+Al agregar como parámetro al IQ rotate 4 grados, obtenemos los siguientes
  resultados:
 \end_layout
 
@@ -1044,7 +1171,7 @@ Señal de barrido de frecuencia
 \end_layout
 
 \begin_layout Standard
-Podemos ver que son equivalentes a los obtenidos en el item b.
+Podemos ver que son equivalentes a los obtenidos en el ítem b.
 \end_layout
 
 \end_body
