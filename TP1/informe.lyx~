@@ -989,20 +989,14 @@ sto puede verse fácilmente ya que dicho producto es:
 
 \end_layout
 
-\begin_layout Section
-Ejercicio 2 - 3.13 
-\end_layout
-
-\begin_layout Subsection
-Introducción
-\end_layout
-
 \begin_layout Standard
-MARCO TEORICO
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "copiaMati.lyx"
 
-\begin_layout Subsection
-Simulaciones
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
