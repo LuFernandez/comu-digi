@@ -1,0 +1,971 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Ejercicio 4 - 4.2 libro de Sklar
+\end_layout
+
+\begin_layout Subsection
+Item a
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Correr el sistema propuesto y notar que los dos inputs pueden ser recuperados
+ en el receptor a la salida.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Partiendo del sistema propuesto, se armó el mismo y se simuló la salida
+ sin defasajes en los osciladores en el receptor.
+ El sistema es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/Screenshot 2020-05-11 14.32.27.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El output comparado con el input para el receptor es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itema.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal pseudo aleatoria
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itema2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Frequency Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, se puede obtener una replica de la entrada en la salida.
+\end_layout
+
+\begin_layout Standard
+Modulacion de Amplitud de una señal con ancho de banda 
+\begin_inset Formula $B$
+\end_inset
+
+ y frecuencia 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+, produce una señal limitada en banda de frecuencias 
+\begin_inset Formula $f_{c}-B$
+\end_inset
+
+ a 
+\begin_inset Formula $f_{c}+B$
+\end_inset
+
+, es decir, de ancho de banda 
+\begin_inset Formula $2B$
+\end_inset
+
+.
+ Por lo que se requiere un ancho de banda de 
+\begin_inset Formula $2B$
+\end_inset
+
+ para transmitir una señal de ancho de banda 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Con la modulación en cuadratura usamos portadoras ortogonales para modular
+ dos señales con ancho de banda 
+\begin_inset Formula $B$
+\end_inset
+
+ con la misma frecuencia de portadora 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Item b
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Ingresar un error de fase de cuatro grados en el oscilador local en el receptor.
+ Cual es el efecto en la salida?
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al ingresar el error de fase se obtiene la siguiente salida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemb.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemb2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Freq Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto se debe a que al haber un defasaje en la demodulacion, hay una superposicio
+n entre el las señales por lo que en la salida se puede ver una 'mezcla'
+ de las dos señales.
+ Como resultado, se ve montado una senoidal en los pulsos, y se ven los
+ pulsos en el barrido de frecuencia.
+ Esto se puede ver mas claramente planteando las ecuaciones del circuito.
+ A la entrada tenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+I(t) & In-phase\\
+Q(t) & Quadrature
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al pasar por la modulacion obtenemos la suma de las señales multiplicadas
+ por su oscilador correspondiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(t)=I(t)\cdotp cos(\omega_{o}t)-Q(t)\cdotp sin(\omega_{o}t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la demodulacion se multiplica la señal por otra senodial y se atraviesa
+ la señal por un filtro LP.
+ Lo obtenido en la demodulacion de las señales moduladas antes del filtro
+ son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+A(t)=S(t)\cdotp cos(\omega_{o}t+\theta)=S(t)\cdotp[cos(\omega_{o}t)\cdotp cos(\theta)-sin(\omega_{o}t)\cdotp sin(\theta)]=S(t)\cdotp cos(\omega_{o}t)\cdotp cos(\theta)-S(t)\cdotp sin(\omega_{o}t)\cdotp sin(\theta)\\
+B(t)=S(t)\cdotp(-sin(\omega_{o}t+\theta))=-S(t)\cdotp[sin(\omega_{o}t)\cdotp cos(\theta)+cos(\omega_{o}t)\cdotp sin(\theta)]=-S(t)\cdotp sin(\omega_{o}t)\cdotp cos(\theta)-S(t)\cdotp cos(\omega_{o}t)\cdotp sin(\theta)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede obsevar que si 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, obtenemos que nuestar señales son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+A_{ideal}(t)=S(t)\cdotp cos(\omega_{o}t)\\
+B_{ideal}(t)=-S(t)\cdotp sin(\omega_{o}t)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando propiedades trigonometricas sobre 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+, se puede llegar a:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{ideal}(t)=\frac{I(t)}{2}\cdotp[1+cos(2\omega_{o}t)+\frac{Q(t)}{2}\cdotp sin(2\omega_{o}t)]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando un LP a 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+, llegamos a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{ideal-LP}(t)=\frac{I(t)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que llegamos a la conclusion de que con 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+ se puede obtener nuevamente nuestra señal de entrada.
+ Un procedimiento analogo se puede llevar a cabo para llegar a la misma
+ conclusion con 
+\begin_inset Formula $B_{ideal}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Entonces, reemplazando 
+\begin_inset Formula $A_{ideal}(t)$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{ideal}(t)$
+\end_inset
+
+ en 
+\begin_inset Formula $A(t)$
+\end_inset
+
+, obtenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(t)=A_{ideal}(t)\cdotp cos(\theta)+B_{ideal}(t)\cdotp sin(\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con este resultado vemos como, cuando 
+\begin_inset Formula $\theta\neq2\pi n$
+\end_inset
+
+, la señal que se obtiene luego del filtro LP es una suma de ambas señales
+ con diferente amplitud.
+ Para el caso de 
+\begin_inset Formula $\theta=4^{\textdegree}$
+\end_inset
+
+, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(t)=A_{ideal}(t)\cdotp cos(4^{\textdegree})+B_{ideal}(t)\cdotp sin(4^{\textdegree})=A_{ideal}(t)\cdotp0.9975+B_{ideal}(t)\cdotp0.0697$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y luego del filtro se tendra:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{LP}(t)=I(t)\cdotp0.9975+Q(t)\cdotp0.0697$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Item c
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Probar agregar ruido gaussiano al canal y correr el sistema nuevamente.
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al agregar ruido gaussiano al sistema sin el defasaje se obtienen los siguientes
+ resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemc.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemc2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Freq Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al agregar ruido gaussiano al sistema con el defasaje se obtienen los siguientes
+ resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemc.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemc2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Freq Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Item d y e
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Abrir un nuevo sistema en System View.
+ Identificar el Qad_Mod token del lado de la modulacion, y el IQ-mixer en
+ el receptor y chequear los parametros.
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al abrir el nuevo sistema se obtiene lo siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemd.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nuevo sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver como las dos señales entran al Quad Mod token, donde se multiplican
+ por sus respecivas moduladoras y son sumadas.
+ De ahi se obtiene una sola señal la cual es enviada por el canal.
+ Luego de salir del canal, entra en el token de IQ Mixer, el cual multiplica
+ la señal por la demoduladora correspondiente.
+ Por lo que luego de pasar por el filtro LP, se obtienen las dos señales
+ originales nuevamente.
+\end_layout
+
+\begin_layout Subsection
+Item f
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Correr nuevamente el sistema y confirmar que el output es igual que en el
+ anterior.
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al correr el nuevo sistema, se obtienen los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemf.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemf2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Freq Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar que actuan de manera equivalente al primer sistema, pudiendo
+ recuperar ambas señales en el receptor.
+\end_layout
+
+\begin_layout Subsection
+Item g
+\end_layout
+
+\begin_layout Subsubsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Para el IQ-mixer, settear el parametro IQ rotate a 4 grados y confirmar
+ que el efecto es el mismo que poner un defasaje como en el punto anterior.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Resolución
+\end_layout
+
+\begin_layout Standard
+Al agregar como parametro al IQ rotate 4 grados, obtenemos los siguientes
+ resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemg.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/itemg2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Freq Sweep
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos ver que son equivalentes a los obtenidos en el item b.
+\end_layout
+
+\end_body
+\end_document
